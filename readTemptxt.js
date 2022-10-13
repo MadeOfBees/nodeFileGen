@@ -2,12 +2,12 @@ const fs = require('fs');
 
 fs.readFile('temp.txt', 'utf8', function(err, data) {
     if (err) throw err;
-    console.log('OK: ' + 'temp.txt');
-    console.log(data)
-    var licenseChoices = data.split(',\r\n')
-    console.log(licenseChoices)
+    var licenseChoices = data.split('\r\n')
     licenseChoices.forEach(string => {
         string.trim()
     })
-    console.log(licenseChoices)
+    
+    fs.appendFile('log.txt', `${licenseChoices}`, (err) =>
+    err ? console.error(err) : console.log('Commit logged!')
+    );
   });

@@ -15,7 +15,7 @@ async function init() {
         type: "list",
         name: "license",
         message: "What License would you like",
-        choices: ["MIT", "NoLicese"]
+        choices: ["Microsoft Public License","MIT","Mozilla Public License","Open Software License","No License"]
     }])
     for (const key in newData) {
         if (Object.hasOwnProperty.call(newData, key)) {
