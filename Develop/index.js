@@ -22,7 +22,6 @@ async function init() {
         questionArr.push(data)
         ++iteration
     }
-    // WHY DOESNT THIS WORK?!
     console.log(questionArr)
     var info = await inquirer.prompt(questionArr)
     generateMarkdown(info)
@@ -46,5 +45,3 @@ class TitleMaker {
 }
 
 init();
-const type = ['input', 'list', 'checkbox', 'input']
-
