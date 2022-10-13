@@ -3,6 +3,5 @@ const questions = [`What is the name of your app?`, `What is this app for?`, `Ho
 const names =['title', 'usage', 'howTo', 'install', 'issues', 'contribute']
 
 var projectQuestions = createQuestionMakerClass(questions, names)
-console.log(projectQuestions)
 
 module.exports = projectQuestions

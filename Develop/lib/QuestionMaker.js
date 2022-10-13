@@ -18,8 +18,10 @@ class QuestionMaker {
 
 
 function createQuestionMakerClass(questions, names){
+    if(!Array.isArray(questions)) {return}
+    if(!Array.isArray(names)) {return}
     if(questions.length === names.length){
-        return new QuestionMaker(questions,names).createInquirerQuestions
+        return new QuestionMaker(questions,names).createInquirerQuestions()
     }
     console.log("Can't make class")
 }
