@@ -10,12 +10,11 @@ function writeToFile(data) {
 
 async function init() {
     var info = await inquirer.prompt(projectQuestions)
-    console.log(info)
     var newData = await inquirer.prompt([{
         type: "list",
         name: "license",
         message: "What License would you like",
-        choices: ["Microsoft Public License","MIT","Mozilla Public License","Open Software License","No License"]
+        choices: ["Creative Commons","Eclipse Public License","GNU General Public License","ISC","MIT","Mozilla Public License","No license please"]
     }])
     for (const key in newData) {
         if (Object.hasOwnProperty.call(newData, key)) {
@@ -28,6 +27,5 @@ async function init() {
     return
     generateMarkdown(info)
 }
-
 
 init();
