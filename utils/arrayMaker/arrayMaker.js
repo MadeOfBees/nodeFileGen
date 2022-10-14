@@ -8,7 +8,7 @@ fs.readFile('input.txt', 'utf8', function(err, data) {
     })
     const wQuotes = input.map(input => `"${input}"`);
     const finalArray = `[${wQuotes}]`
-    fs.writeFile('array.txt', `${wQuotes}`, (err) =>
+    fs.writeFile('array.txt', `${finalArray}`, (err) =>
     err ? console.error(err) : console.log('Created in array.txt')
     );
   });
