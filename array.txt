@@ -1,0 +1,1 @@
+["Creative Commons","Eclipse Public License","GNU General Public License","ISC","MIT","Mozilla Public License","No license please"]
