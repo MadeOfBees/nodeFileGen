@@ -1,0 +1,9 @@
+name
+description
+install
+usage
+report
+tests
+support
+username
+email
