@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('temp.txt', 'utf8', function(err, data) {
+fs.readFile('input.txt', 'utf8', function(err, data) {
     if (err) throw err;
     var licenseChoices = data.split('\r\n')
     licenseChoices.forEach(string => {
