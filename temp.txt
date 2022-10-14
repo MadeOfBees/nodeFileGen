@@ -1,6 +1,13 @@
-
-"Microsoft Public License"
-"MIT"
-"Mozilla Public License"
-"Open Software License"
-"No License"
+One
+Two
+Three
+Four
+Five
+Six
+Seven
+Eight
+Nine
+Ten
+Eleven
+Twelve
+Thirteen
