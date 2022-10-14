@@ -2,13 +2,13 @@ const fs = require('fs');
 
 fs.readFile('input.txt', 'utf8', function(err, data) {
     if (err) throw err;
-    var licenseChoices = data.split('\n')
-    licenseChoices.forEach(string => {
+    var input = data.split('\n')
+    input.forEach(string => {
         string.trim()
     })
-    const lcWrappedInQuotes = licenseChoices.map(licenseChoices => `"${licenseChoices}"`);
-    const finalArray = `[${lcWrappedInQuotes}]`
-    fs.writeFile('array.txt', `${finalArray}`, (err) =>
-    err ? console.error(err) : console.log('Created array.txt file')
+    const wQuotes = input.map(input => `"${input}"`);
+    const finalArray = `[${wQuotes}]`
+    fs.writeFile('array.txt', `${wQuotes}`, (err) =>
+    err ? console.error(err) : console.log('Created in array.txt')
     );
   });
