@@ -8,7 +8,7 @@ fs.readFile('temp.txt', 'utf8', function(err, data) {
     })
     const lcWrappedInQuotes = licenseChoices.map(licenseChoices => `"${licenseChoices}"`);
     const finalArray = `[${lcWrappedInQuotes}]`
-    fs.writeFile('log.txt', `${finalArray}`, (err) =>
+    fs.writeFile('array.txt', `${finalArray}`, (err) =>
     err ? console.error(err) : console.log('Created log.txt file')
     );
   });
