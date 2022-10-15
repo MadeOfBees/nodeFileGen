@@ -51,15 +51,15 @@ function renderLicenseSection(selectedLicence) {
 function generateMarkdown(info) {
   selectedLicence = info.license;
   renderLicenseSection(selectedLicence)
-  printMe =
-    `\n\r#${info.name} \n
-    \r#Description: \n ${info.description} \n
-    \r#Installation instructions: \n ${info.install} \n
-    \r#Report an issue: \n ${info.report} \n
-    \r#Tests done for this repo:\n ${info.tests} \n
-    \r#Support me: \n Hi, i'm ${info.username}, if you want to support this project: ${info.support}, feel free to email me @${info.email} \n
-    \r#Licence \n ${renderedLicence} \n`;  
+  one =
+    `# ${info.name} \n
+    \r# Description: \n ${info.description} \n
+    \r# Installation instructions: \n ${info.install} \n
+    \r# Report an issue: \n ${info.report} \n
+    \r# Tests done for this repo:\n ${info.tests} \n
+    \r# Support me: \n Hi, i'm ${info.username}, if you want to support this project: ${info.support}, feel free to email me @${info.email} \n
+    \r# Licence \n ${renderedLicence} \n`;  
+    printMe = one
     module.exports=printMe;
-  
 }
 module.exports = generateMarkdown;

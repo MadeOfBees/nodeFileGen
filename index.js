@@ -5,7 +5,7 @@ const projectQuestions = require('./getQuestions');
 const { info } = require('console');
 
 function writeToFile(printMe) {
-    fs.appendFile('ReadMe.md', printMe, (err) =>
+    fs.writeFile('ReadMe.md', printMe, (err) =>
         err ? console.error(err) : console.log('Commit logged!'));
 }
 
