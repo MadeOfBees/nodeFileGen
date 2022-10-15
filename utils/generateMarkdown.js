@@ -25,10 +25,9 @@ function renderLicenseBadge(lice) {
       uBadge = badges[5];
       break;
     case `No license please`:
-      uBadge = badges[1];
+      uBadge = badges[6];
       break;
     default:
-      console.log(`Sorry, we are out of ${expr}.`);
   }
 }
 
