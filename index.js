@@ -1,8 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const projectQuestions = require('./getQuestions')
+const projectQuestions = require('./getQuestions');
+const { info } = require('console');
 console.log(projectQuestions)
+
 function writeToFile(data) {
     fs.appendFile('ReadMe.md', data, (err) =>
         err ? console.error(err) : console.log('Commit logged!'));
@@ -23,9 +25,8 @@ async function init() {
             }    
         }
     }
-    console.log(info)
-    return
     generateMarkdown(info)
 }
+
 
 init();
