@@ -27,7 +27,6 @@ function renderLicenseBadge(lice) {
     case `No license please`:
       uBadge = badges[6];
       break;
-    default:
   }
 }
 
