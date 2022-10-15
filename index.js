@@ -3,7 +3,6 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const projectQuestions = require('./getQuestions');
 const { info } = require('console');
-console.log(projectQuestions)
 
 function writeToFile(printMe) {
     fs.appendFile('ReadMe.md', printMe, (err) =>
@@ -25,7 +24,7 @@ async function init() {
             }    
         }
     }
-    generateMarkdown(info)
-
+    generateMarkdown(info);
+    writeToFile(printMe)
 }
 init();
