@@ -5,6 +5,7 @@ var uBadge
 var uLicLink
 var renderedLicence
 var noLicence = 0;
+var printMe
 
 // Made rendering badges/links the same function based around a single switch case to avoid redundant code, gotta stay DRY.
 // This function checks which licence the user's selected then returns the correct badge to add to the readme and the correct link to learn more about this licence.
@@ -50,18 +51,17 @@ function renderLicenseSection(selectedLicence) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(info) {
-  console.log(`#name \n ${info.name} \n`);
-  console.log(`#description \n ${info.description} \n`);
-  console.log(`#install \n ${info.install} \n`);
-  console.log(`#report \n ${info.report} \n`);
-  console.log(`#tests \n ${info.tests} \n`);
-  console.log(`#support \n ${info.support} \n`);
-  console.log(`#username \n ${info.username} \n`);
-  console.log(`#email \n ${info.email} \n`);
-  
   selectedLicence = info.license;
   renderLicenseSection(selectedLicence)
-  console.log(renderedLicence)
+  printMe = (
+    `\n\r#${info.name} \n
+    \r#description: \n ${info.description} \n
+    \r#installation instructions: \n ${info.install} \n
+    \r#report an issue: \n ${info.report} \n
+    \r#tests done for this repo:\n ${info.tests} \n
+    \r#support me: \n Hi, i'm ${info.username}, if you want to support this project: ${info.support}, feel free to email me @${info.email} \n
+    \r#licence \n ${renderedLicence} \n`);
+  console.log (printMe);
 }
 
 module.exports = generateMarkdown;
