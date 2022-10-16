@@ -1,6 +1,0 @@
-https://creativecommons.org/licenses/
-https://www.eclipse.org/legal/epl-2.0/
-https://www.gnu.org/licenses/gpl-3.0.en.html
-https://api.github.com/licenses/isc
-https://api.github.com/licenses/MIT
-https://www.mozilla.org/en-US/MPL/
