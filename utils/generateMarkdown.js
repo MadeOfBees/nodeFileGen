@@ -54,6 +54,10 @@ function generateMarkdown(info) {
   printMe =
     `# ${info.name} \n
     \r## Description: \n ${info.description} \n
+    \r## Table of Contents\n
+    \r[Installation/Instructions](#Installation/Instructions)\n
+    \r[Report](#Report an issue)\n
+    \r[Licence](#Licence)\n
     \r## Installation/Instructions: \n ${info.install} \n ${info.usage} \n
     \r## Report an issue: \n ${info.report} \n Or send an email to ${info.email} discribing your your bug and how to replicate the issue\n
     \r## Tests done for this repo:\n ${info.tests} \n
